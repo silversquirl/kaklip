@@ -4,7 +4,7 @@ declare-option -docstring 'clipboard sync command' str kaklip_cmd %sh{
 	if command -v xsel >/dev/null 2>&1; then
 		echo 'xsel --clipboard --nodetach'
 	elif command -v xclip >/dev/null 2>&1; then
-		echo 'xclip -selection clipboard -quiet 2>/tmp/kaklip_log'
+		echo 'xclip -selection clipboard -quiet 2>/dev/null'
 	else
 		echo "Cannot find xsel or xclip!" >&2
 		exit 1
