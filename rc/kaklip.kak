@@ -1,5 +1,3 @@
-provide-module kaklip %§
-
 declare-option -docstring 'clipboard sync command' str kaklip_cmd %sh{
 	if command -v xsel >/dev/null 2>&1; then
 		echo 'xsel --clipboard --nodetach'
@@ -32,5 +30,3 @@ define-command kaklip-pull -hidden -docstring 'Pull system clipboard changes to 
 hook global RegisterModified '"' kaklip-push
 hook global FocusIn .* kaklip-pull
 hook global KakBegin .* kaklip-pull
-
-§

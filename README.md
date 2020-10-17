@@ -27,11 +27,9 @@ kaklip solves this problem by keeping track of where the current clipboard data 
 The recommended way to use kaklip is using [plug.kak]:
 
 ```kak
-plug "vktec/kaklip" %{
-	require-module kaklip
-}
+plug "vktec/kaklip"
 ```
 
-Alternatively, you can copy `rc/kaklip.kak` to your autoload and add `require-module kaklip` to your kakrc.
+Alternatively, you can copy `rc/kaklip.kak` to your autoload.
 
 [plug.kak]: https://github.com/robertmeta/plug.kak
